@@ -7,5 +7,12 @@ use Catalyst;
 
 package MyApp::Component;
 use Moose;
-extends 'Catalyst::Component';
-::use_ok 'CatalystX::MooseComponent';
+BEGIN { extends 'Catalyst::Component' };
+use CatalystX::MooseComponent;
+
+package main;
+my $meta = Moose::Util::find_meta('MyApp::Component');
+is_deeply(
+  [ $meta->superclasses ],
+  [ 'Moose::Object', 'Catalyst::Component' ],
+);
