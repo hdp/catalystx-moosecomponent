@@ -51,4 +51,9 @@ C<Moose::Object> to your component's superclasses.
 Called automatically by C<import> to set up the proper superclasses and wrap
 C<new()>.
 
+=head1 CREDIT
+
+Based on code from L<Catalyst::Controller::ActionRole> by Florian Ragwitz
+<rafl@debian.org>.
+
 =cut
