@@ -31,7 +31,10 @@ sub init_meta {
 
 =head1 SYNOPSIS
 
-  package My::CatalystComponent;
+  package MyApp::Controller::Foo;
+
+  use Moose;
+  BEGIN { extends 'Catalyst::Controller' }
   use CatalystX::MooseComponent;
 
   # My::CatalystComponent now isa Moose::Object
